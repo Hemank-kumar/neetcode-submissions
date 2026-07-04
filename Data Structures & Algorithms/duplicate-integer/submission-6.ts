@@ -1,0 +1,16 @@
+class Solution {
+    /**
+     * @param {number[]} nums
+     * @return {boolean}
+     */
+    hasDuplicate(nums: number[]): boolean {
+        const map  = new Map<number,number>();
+        for(let e of nums){
+            if(map.has(e)){
+                return true;
+            }
+            map.set(e,1);
+        }
+        return false;
+    }
+}
